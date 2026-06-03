@@ -8,9 +8,9 @@
   :root{
     --bg:#f3f1ee; --paper:#fff; --navy:#211b40; --navy2:#2c2455;
     --ink:#1c1830; --dim:#6b6580; --faint:#9b94ac;
-    --indigo:#6e6cd9; --indigo-bg:#eceaff; --magenta:#db139c; --magenta-bg:#fdeaf5;
-    --grad:linear-gradient(90deg,#8b069b,#6e6cd9);
-    --green:#2ec27e; --amber:#f0a23b; --red:#e8604e; --line:#e7e3ec;
+    --indigo:#5f5dc9; --indigo-bg:#eceaff; --magenta:#b80f86; --magenta-bg:#fdeaf5;
+    --grad:linear-gradient(90deg,#8b069b,#5f5dc9);
+    --green:#5f5dc9; --amber:#9b96b0; --red:#b80f86; --line:#e7e3ec;
     --shadow:0 10px 34px rgba(40,30,70,.10);
     --chH:58px; --topH:232px; --beltH:60px; --botH:222px; --colW:300px; --labW:160px;
   }
@@ -24,15 +24,15 @@
   h1 .o{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .sub{font-size:16px;color:var(--dim);margin:0;max-width:780px}
   .sub b{color:var(--ink)}
-  .cast{margin-top:14px;background:var(--navy);color:#fff;border-radius:16px;padding:16px 20px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
-  .cast .c{display:flex;gap:10px;align-items:center;font-size:13px;color:#e9e6f7}
-  .cast .c .av{width:34px;height:34px;border-radius:10px;background:#3a2f63;display:flex;align-items:center;justify-content:center;font-size:17px}
-  .cast .c b{color:#fff;display:block;font-size:13.5px}.cast .c span{color:#b9b2d6;font-size:11.5px}
-  .cast .goal{margin-left:auto;font-size:13px;color:#ffd49a;background:rgba(240,162,59,.14);padding:7px 13px;border-radius:10px}
+  .cast{margin-top:14px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:16px 20px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)}
+  .cast .c{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--dim)}
+  .cast .c .av{width:34px;height:34px;border-radius:10px;background:#efeaf6;color:#5f5dc9;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .cast .c b{color:var(--ink);display:block;font-size:13.5px}.cast .c span{color:var(--faint);font-size:11.5px}
+  .cast .goal{margin-left:auto;font-size:13px;color:#b80f86;font-weight:700;background:#efeaf6;border:1px solid #e6e0f0;padding:7px 13px;border-radius:10px}
 
   .ctl{display:flex;align-items:center;gap:10px;margin:18px 0 8px;flex-wrap:wrap}
-  .play{background:var(--navy);color:#fff;border:none;border-radius:999px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer}
-  .play:hover{background:var(--navy2)}
+  .play{background:var(--magenta);color:#fff;border:none;border-radius:999px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer}
+  .play:hover{background:#9c0c72}
   .nav{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:18px;cursor:pointer;color:var(--ink)}
   .nav:hover{border-color:var(--indigo);color:var(--indigo)}
   .cap{font-size:13.5px;color:var(--dim);margin-left:6px}.cap b{color:var(--magenta)}
@@ -69,7 +69,7 @@
   .mini{margin-top:7px;display:flex;flex-direction:column;gap:4px}
   .mini .m{display:flex;align-items:center;gap:6px;font-size:11px;background:#f7f6fb;border:1px solid var(--line);border-radius:7px;padding:4px 7px}
   .mini .m .dot{width:6px;height:6px;border-radius:50%;flex:0 0 6px}
-  .flag .m{background:#fdeeec;border-color:#f6d6d1}
+  .flag .m{background:#f3eef9;border-color:#e6e0f0}
   .docs4{margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
   .dg{background:#f7f6fb;border:1px solid var(--line);border-radius:8px;padding:6px 7px}
   .dg .t{font-size:10.5px;font-weight:800;color:var(--indigo)}
@@ -77,26 +77,26 @@
   .scoreline{margin-top:7px;font-size:11px;color:var(--dim)}.scoreline b{color:var(--ink)}
   .meter{height:7px;border-radius:999px;background:#eee;overflow:hidden;margin-top:4px}.meter>i{display:block;height:100%;background:var(--grad)}
   .person{display:flex;gap:7px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 8px;margin-top:6px;font-size:11px}
-  .person .av{width:22px;height:22px;border-radius:6px;background:var(--magenta-bg);display:flex;align-items:center;justify-content:center;font-size:12px}
+  .person .av{width:24px;height:22px;border-radius:6px;background:#efeaf6;color:#5f5dc9;font-weight:800;font-size:10px;display:flex;align-items:center;justify-content:center;flex:0 0 24px}
 
   .belt{position:relative;display:flex;align-items:center;justify-content:center}
   .belt::before{content:"";position:absolute;left:0;right:0;top:50%;height:6px;transform:translateY(-50%);
     background:repeating-linear-gradient(90deg,#cfc9e6 0 9px,transparent 9px 20px);background-size:20px 6px;animation:flow 1s linear infinite}
   @keyframes flow{to{background-position:20px 0}}
-  .belt .node{position:relative;z-index:2;width:44px;height:44px;border-radius:50%;background:var(--paper);
-    border:2px solid #d8d2e4;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(40,30,70,.08);transition:.2s}
-  .col.active .node{border-color:var(--indigo);box-shadow:0 0 0 6px rgba(110,108,217,.14)}
+  .belt .node{position:relative;z-index:2;width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;
+    border:3px solid var(--paper);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;font-size:16px;box-shadow:0 4px 14px rgba(184,15,134,.2);transition:.2s}
+  .col.active .node{box-shadow:0 0 0 5px rgba(184,15,134,.16)}
   .belt .arr{position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:#b9b2c8;font-size:17px;z-index:3}
 
   .col.start{flex-basis:236px;width:236px;background:#fbfaff;margin-left:22px}
   .col.wide{flex-basis:360px;width:360px}
   .start .chaos{font-size:22px;letter-spacing:-3px}
-  .col.finale{flex-basis:340px;width:340px;background:linear-gradient(180deg,#f7fff9,#eefaf2);border-right:none}
+  .col.finale{flex-basis:340px;width:340px;background:linear-gradient(180deg,#f7f1fb,#f3eef9);border-right:none}
   .finale .wrapf{grid-row:1/5;padding:18px;display:flex;flex-direction:column;justify-content:center}
-  .finale .badge{display:inline-block;align-self:flex-start;background:#e7f8ef;color:#1c7a52;font-weight:800;font-size:12px;padding:4px 12px;border-radius:999px}
+  .finale .badge{display:inline-block;align-self:flex-start;background:#efeaf6;color:#5f5dc9;font-weight:800;font-size:12px;padding:4px 12px;border-radius:999px}
   .finale h3{font-family:Georgia,serif;font-size:18px;margin:10px 0 6px}
-  .finale .vr{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);padding:5px 0;border-bottom:1px dashed #d6ebdf}.finale .vr b{color:var(--ink)}
-  .finale .time{margin-top:10px;font-size:12.5px;color:var(--green);font-weight:700}
+  .finale .vr{display:flex;justify-content:space-between;font-size:12px;color:var(--dim);padding:5px 0;border-bottom:1px dashed #e6e0f0}.finale .vr b{color:var(--ink)}
+  .finale .time{margin-top:10px;font-size:12.5px;color:#b80f86;font-weight:700}
   .finale .ep{margin-top:8px;font-size:11.5px;color:var(--dim)}
 
   .pdots{display:flex;gap:5px;justify-content:center;margin:10px 0 0;flex-wrap:wrap}
@@ -113,15 +113,15 @@
 <body>
 <div class="wrap">
   <div class="brand">ASPEX<b> · </b>LUMI</div>
-  <div class="eyebrow">📖 история одной заявки</div>
+  <div class="eyebrow">история одной заявки</div>
   <h1>Как компания получает кредит — и где помогает <span class="o">LUMI</span></h1>
-  <p class="sub">Пройдём весь банковский кредитный конвейер слева направо как историю. Две дорожки: <b style="color:#6e6cd9">что происходит с данными</b> и <b style="color:#db139c">что делают люди — заёмщик, аналитик, комитет</b>. Где-то работает человек, где-то — LUMI.</p>
+  <p class="sub">Пройдём весь банковский кредитный конвейер слева направо как историю. Две дорожки: <b style="color:#5f5dc9">что происходит с данными</b> и <b style="color:#b80f86">что делают люди — заёмщик, аналитик, комитет</b>. Где-то работает человек, где-то — LUMI.</p>
 
   <div class="cast">
-    <div class="c"><span class="av">🏢</span><div><b>ТОО «Астана Инвест»</b><span>заёмщик · группа 10 компаний</span></div></div>
-    <div class="c"><span class="av">👩‍💼</span><div><b>Айгуль</b><span>кредитный аналитик банка</span></div></div>
-    <div class="c"><span class="av">👥</span><div><b>Кредитный комитет</b><span>принимает решение</span></div></div>
-    <div class="goal">🎯 Нужна кредитная линия 50 млн ₸ на оборотку</div>
+    <div class="c"><span class="av">АИ</span><div><b>ТОО «Астана Инвест»</b><span>заёмщик · группа 10 компаний</span></div></div>
+    <div class="c"><span class="av">Ай</span><div><b>Айгуль</b><span>кредитный аналитик банка</span></div></div>
+    <div class="c"><span class="av">КК</span><div><b>Кредитный комитет</b><span>принимает решение</span></div></div>
+    <div class="goal">Нужна кредитная линия 50 млн ₸ на оборотку</div>
   </div>
 
   <div class="ctl">
@@ -136,15 +136,15 @@
     <div class="rail" id="rail">
       <div class="labels">
         <div class="e">сюжет →</div>
-        <div class="lab top"><div class="k">🛠 Данные / система</div><div class="d">где работает LUMI</div></div>
+        <div class="lab top"><div class="k">Данные / система</div><div class="d">где работает LUMI</div></div>
         <div class="mid">конвейер →</div>
-        <div class="lab bot"><div class="k">👤 Люди</div><div class="d">заёмщик · аналитик · банк</div></div>
+        <div class="lab bot"><div class="k">Люди</div><div class="d">заёмщик · аналитик · банк</div></div>
       </div>
 
       <!-- 0 START -->
       <div class="col start" data-i="0">
         <div class="chead"><div class="gn">завязка</div><div class="gt">Нужны деньги</div><div class="day">День 0</div></div>
-        <div class="cell top"><div class="tag">данные</div><h4>Пока ничего нет</h4><div class="chaos">🏢💸❓</div><p style="margin-top:5px">Компания растёт, не хватает оборотных средств.</p></div>
+        <div class="cell top"><div class="tag">данные</div><h4>Пока ничего нет</h4><p style="margin-top:5px">Компания растёт, не хватает оборотных средств.</p></div>
         <div class="belt"><div class="node">🚀</div><span class="arr">➜</span></div>
         <div class="cell bot"><div class="tag">люди</div><h4>Решение взять кредит</h4><p>Директор идёт в банк. Банк отвечает: «соберите документы».</p></div>
       </div>
@@ -183,7 +183,7 @@
           <div class="mini"><div class="m"><span class="dot" style="background:var(--indigo)"></span>Фин. здоровье: 72/100</div></div></div>
         <div class="belt"><div class="node">📊</div><span class="arr">➜</span></div>
         <div class="cell bot"><div class="tag">Айгуль больше не тонет в рутине</div><h4>Фокус на суждении</h4>
-          <div class="person"><span class="av">👩‍💼</span><div>Проверяет то, что подсветила система, а не считает вручную 10–20 дней.</div></div>
+          <div class="person"><span class="av">Ай</span><div>Проверяет то, что подсветила система, а не считает вручную 10–20 дней.</div></div>
           <div class="mini flag" style="margin-top:5px"><div class="m"><span class="dot" style="background:var(--red)"></span>дебиторка +60% → копает причину</div></div></div>
       </div>
 
@@ -207,7 +207,7 @@
           <div class="scoreline">Балл: <b>58 / 100</b><div class="meter"><i style="width:58%"></i></div></div></div>
         <div class="belt"><div class="node">⚖️</div><span class="arr">➜</span></div>
         <div class="cell bot"><div class="tag">правило банка → вердикт</div><h4>Кому дать, кому нет</h4>
-          <p><b>&gt;70</b> одобрить · <b>50–70</b> к рассмотрению · <b>&lt;50</b> отказать.<br>58 → <b style="color:#b9772a">к рассмотрению</b>: линия с ковенантами, не разовый кредит.</p></div>
+          <p><b>&gt;70</b> одобрить · <b>50–70</b> к рассмотрению · <b>&lt;50</b> отказать.<br>58 → <b style="color:#b80f86">к рассмотрению</b>: линия с ковенантами, не разовый кредит.</p></div>
       </div>
 
       <!-- 6 ПРОГНОЗ -->
@@ -237,7 +237,7 @@
           <p>Все документы, заключение и решение комитета — в одном досье. Прозрачно и проверяемо для регулятора.</p></div>
         <div class="belt"><div class="node">✅</div><span class="arr">➜</span></div>
         <div class="cell bot"><div class="tag">развязка</div><h4>Одобрено с условиями</h4>
-          <div class="person"><span class="av">🏢</span><div>«Астана Инвест» подписывает договор. <b>Деньги на счёте.</b></div></div></div>
+          <div class="person"><span class="av">АИ</span><div>«Астана Инвест» подписывает договор. <b>Деньги на счёте.</b></div></div></div>
       </div>
 
       <!-- 9 МОНИТОРИНГ -->
@@ -275,6 +275,7 @@
     <div class="pf"><div class="bk">👩‍💼 РЕШАЕТ ЧЕЛОВЕК</div><div class="px">LUMI готовит и подсвечивает — <b>финальное слово за аналитиком и комитетом</b>.</div></div>
   </div>
 
+  <div style="text-align:center;margin:26px 0 0"><a href="investor.html" style="display:inline-flex;align-items:center;gap:8px;background:#efeaf6;border:1px solid #e6e0f0;color:#5f5dc9;border-radius:999px;padding:11px 22px;font-size:14px;font-weight:700;text-decoration:none">Для инвестора: почему в LUMI стоит вложиться →</a></div>
   <div class="foot">Сделал Robert — цифровой CMO Aspex/LUMI. Источники: техдокументация LUMI (4 модуля, формы Ф1-Ф4/ОСВ/910) + интерфейс продукта + публичные материалы о банковском кредитном конвейере (<a href="https://www.banki.ru/wikibank/anderrayting_v_kreditovanii/">андеррайтинг vs скоринг</a>, <a href="https://www.raiffeisen.ru/wiki/kakie-dokumenty-nuzhny-dlya-kredita-juridicheskomy-litsy/">перечень документов</a>). Кейс ТОО «Астана Инвест» и Айгуль — демонстрационные.</div>
 </div>
 
@@ -310,6 +311,7 @@ function play(){if(playing){stop();return}playing=true;document.getElementById('
   const tick=()=>{if(!playing)return;if(i>=cols.length){stop();return}go(i);i++;timer=setTimeout(tick,2400)};timer=setTimeout(tick,400)}
 document.getElementById('play').addEventListener('click',play);
 conv.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){conv.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false});
+document.querySelectorAll('.col[data-i] .node').forEach((n,i)=>{n.textContent=i+1});
 go(0);
 </script>
 </body>
