@@ -39,12 +39,13 @@
   .hintf{font-size:12.5px;color:var(--faint);margin-left:auto}
 
   .conv{overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;scroll-snap-type:x proximity;
+    scroll-padding-left:calc(var(--labW) + 28px);
     background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
   .conv::-webkit-scrollbar{height:10px}.conv::-webkit-scrollbar-thumb{background:#d8d2e4;border-radius:999px}
   .rail{display:flex;width:max-content;align-items:stretch}
   .labels{position:sticky;left:0;z-index:4;flex:0 0 var(--labW);width:var(--labW);
     display:grid;grid-template-rows:var(--chH) var(--topH) var(--beltH) var(--botH);
-    background:linear-gradient(90deg,var(--paper) 80%,rgba(255,255,255,0));border-right:1px dashed var(--line)}
+    background:var(--paper);border-right:1px solid var(--line);box-shadow:10px 0 16px -8px rgba(40,30,70,.12)}
   .labels .e{display:flex;align-items:center;padding:0 12px;font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--faint);text-transform:uppercase}
   .labels .lab{padding:0 12px;display:flex;flex-direction:column;justify-content:center}
   .labels .lab .k{font-size:11px;letter-spacing:.06em;font-weight:800;text-transform:uppercase}
@@ -87,7 +88,7 @@
   .col.active .node{border-color:var(--indigo);box-shadow:0 0 0 6px rgba(110,108,217,.14)}
   .belt .arr{position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:#b9b2c8;font-size:17px;z-index:3}
 
-  .col.start{flex-basis:236px;width:236px;background:#fbfaff}
+  .col.start{flex-basis:236px;width:236px;background:#fbfaff;margin-left:22px}
   .col.wide{flex-basis:360px;width:360px}
   .start .chaos{font-size:22px;letter-spacing:-3px}
   .col.finale{flex-basis:340px;width:340px;background:linear-gradient(180deg,#f7fff9,#eefaf2);border-right:none}
